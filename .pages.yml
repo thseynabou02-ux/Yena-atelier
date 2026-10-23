@@ -1,0 +1,38 @@
+
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: pieces
+    label: Pièces
+    type: collection
+    path: content/pieces
+    format: json
+    filename: "{primary}.json"
+    fields:
+      - name: nom
+        label: Nom de la pièce
+        type: string
+        required: true
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: prix
+        label: Prix
+        type: string
+
+      - name: image
+        label: Photo principale
+        type: image
+
+      - name: disponibilite
+        label: Disponibilité
+        type: select
+        options:
+          values:
+            - En préparation
+            - Disponible
+            - Épuisé
